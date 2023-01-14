@@ -1,0 +1,13 @@
+/* !-- -------------------google font connect-------------------  */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
