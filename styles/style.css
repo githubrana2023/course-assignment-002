@@ -47,10 +47,25 @@ nav ul li {
   font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
+  transition: all 0.5s;
 }
 
-nav ul li {
+nav ul li a {
   color: #424242;
+  transition: all 0.5s;
+}
+
+nav ul li a:hover,
+nav ul li:hover,
+nav ul li:hover::after {
+  color: #ff900e;
+  transform: translate(0, -10px);
+}
+
+.menu-bar,
+input {
+  display: none;
+  font-size: 25px;
 }
 
 /* banner section style start */
@@ -242,6 +257,43 @@ nav ul li {
 /* feature section end */
 
 /* !facts section start */
+
+.our-fact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.our-fact img {
+  display: block;
+  width: 30%;
+  transition: 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, #ff520e, #ff8f0e00);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.our-fact:hover img {
+  transform: scale(1.1) translateY(-100%) rotate(10deg);
+}
+.our-fact:hover .layer {
+  height: 100%;
+}
+
 .facts-header-container {
   margin-top: 200px;
 }
@@ -288,6 +340,101 @@ nav ul li {
 }
 /* !facts section end */
 
+/* our team section start */
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.works-layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff900e);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.works-layer h3 {
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.works-layer p {
+  width: 100%;
+  max-width: 350px;
+  color: #fff;
+}
+
+.works-layer a {
+  margin-top: 20px;
+  color: #ff900e;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .works-layer {
+  height: 100%;
+}
+
+.btn {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 50px auto;
+  width: fit-content;
+  border: 2px solid #ff900e;
+  background: #ff900e;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #ff900e;
+}
+
+/* our team section end */
+
 /* !sponser section start */
 .sponser-header {
   text-align: center;
@@ -325,18 +472,18 @@ nav ul li {
 /* !sponser section end */
 
 /* !footer section start */
-  .footer{
-    max-width: 100%;
-  }
-  
-  .footer div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 40px 0;
-    background: #FFF4E7;
-  }
+.footer {
+  max-width: 100%;
+}
+
+.footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+  background: #fff4e7;
+}
 
 /* !footer section end */
 
@@ -346,7 +493,7 @@ nav ul li {
   }
 
   nav .logo {
-    font-size: 18px;
+    font-size: 22px;
   }
   .banner-section {
     margin-top: 50px;
@@ -354,149 +501,33 @@ nav ul li {
   nav ul {
     display: none;
   }
-  .banner-details .banner-title,
-  .feature-container-wrapper .feature-title,
-  .feature-services-inner-top h2 {
-    font-size: 30px;
-  }
 
-  .banner-details .btn,
-  .feature-details .btn {
-    padding: 16px 20px;
-  }
-
-  .feature-container-wrapper,
-  .feature-services-container,
-  .sponser-brands,
-  .our-facts{
-    flex-direction: column;
-  }
-  .feature-thubmnails {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .feature-services-right img {
-    width: 100%;
-  }
-  .feature-services-right button {
-    position: static;
-    font-size: 25px;
-    padding: 14px 28px;
-    margin-top: 20px;
-  }
-  .feature-services-right button p {
-    font-size: 16px;
-  }
-  .feature-services-right {
-    text-align: center;
-  }
-  .our-facts{
-    gap: 25px;
-  }
-
-  .sponser-header{
-    margin: 0;
-  }
-  .sponser-brands{
-    gap: 35px;
-  }
-
-  .footer{text-align: center;
-  }
-  .facts-header-container{
-    margin:0;
-  }
-}
-
-@media only screen and (min-width: 577px) and (max-width: 768px)  {
-  .hide {
-    display: none;
-  }
-
-  nav .logo {
-    font-size: 18px;
-  }
-  .banner-section {
-    margin-top: 50px;
-  }
-  nav ul {
-    display: none;
-  }
-  .banner-details .banner-title,
-  .feature-container-wrapper .feature-title,
-  .feature-services-inner-top h2 {
-    font-size: 30px;
-  }
-
-  .banner-details .btn,
-  .feature-details .btn {
-    padding: 16px 20px;
-  }
-
-  .feature-container-wrapper,
-  .feature-services-container,
-  .sponser-brands,
-  .our-facts{
-    flex-direction: column;
-  }
-  .feature-thubmnails {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .feature-services-right img {
-    width: 100%;
-  }
-  .feature-services-right button {
-    position: static;
-    font-size: 25px;
-    padding: 14px 28px;
-    margin-top: 20px;
-  }
-  .feature-services-right button p {
-    font-size: 16px;
-  }
-  .feature-services-right {
-    text-align: center;
-  }
-  .our-facts{
-    gap: 25px;
-  }
-
-  .sponser-header{
-    margin: 0;
-  }
-  .sponser-brands{
-    gap: 35px;
-  }
-
-  .footer{text-align: center;
-  }
-  facts-header-container{
-    margin:0;
-  }
-}
-
-/* @media only screen and (min-width: 577px) and (max-width: 768px) {
-  nav .logo {
+  .menu-bar {
+    display: block;
     font-size: 20px;
-    font-weight: 800;
-    color: #131313;
   }
-  .banner-section {
-    margin-top: 50px;
+
+  .banner-details .banner-title,
+  .feature-container-wrapper .feature-title,
+  .feature-services-inner-top h2 {
+    font-size: 30px;
   }
-  nav ul {
-    display: none;
-  }
-  .banner-details .banner-title {
-    font-size: 40px;
+
+  .banner-details .btn,
+  .feature-details .btn {
+    padding: 16px 20px;
   }
 
   .feature-container-wrapper,
   .feature-services-container,
-  .our-facts{
+  .sponser-brands,
+  .our-facts {
     flex-direction: column;
   }
+  .feature-thubmnails {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .feature-services-right img {
     width: 100%;
   }
@@ -512,12 +543,99 @@ nav ul li {
   .feature-services-right {
     text-align: center;
   }
-  .our-facts{
+  .our-facts {
     gap: 25px;
   }
 
+  .sponser-header {
+    margin: 0;
+  }
+  .sponser-brands {
+    gap: 35px;
+  }
 
+  .footer {
+    text-align: center;
+  }
+  .facts-header-container {
+    margin: 0;
+  }
+
+  input:checked ~ nav ul {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
   .hide {
     display: none;
   }
-} */
+
+  nav .logo {
+    font-size: 18px;
+  }
+  .banner-section {
+    margin-top: 50px;
+  }
+  nav ul {
+    display: none;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .banner-details .banner-title,
+  .feature-container-wrapper .feature-title,
+  .feature-services-inner-top h2 {
+    font-size: 30px;
+  }
+
+  .banner-details .btn,
+  .feature-details .btn {
+    padding: 16px 20px;
+  }
+
+  .feature-container-wrapper,
+  .feature-services-container,
+  .sponser-brands,
+  .our-facts {
+    flex-direction: column;
+  }
+  .feature-thubmnails {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .feature-services-right img {
+    width: 100%;
+  }
+  .feature-services-right button {
+    position: static;
+    font-size: 25px;
+    padding: 14px 28px;
+    margin-top: 20px;
+  }
+  .feature-services-right button p {
+    font-size: 16px;
+  }
+  .feature-services-right {
+    text-align: center;
+  }
+  .our-facts {
+    gap: 25px;
+  }
+
+  .sponser-header {
+    margin: 0;
+  }
+  .sponser-brands {
+    gap: 35px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+  facts-header-container {
+    margin: 0;
+  }
+}

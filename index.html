@@ -8,6 +8,11 @@
 
     <!-- !----------------stylesheet connect--------------- -->
     <link rel="stylesheet" href="styles/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/95c7008c99.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!--! header section start -->
@@ -23,6 +28,10 @@
             <li><a href="#contact us">contact us</a></li>
             <li><a href="#log in">log in</a></li>
           </ul>
+          <div class="menu-bar">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox"> <i class="fa-solid fa-bars"></i></label>
+          </div>
         </nav>
         <!-- navbar section end -->
 
@@ -145,7 +154,7 @@
     <!-- feature section end -->
 
     <!-- our facts section start -->
-    <div class="container ">
+    <div class="container">
       <div class="facts-header-container">
         <h3 class="facts-title">Some Facts</h3>
         <p class="facts-description">
@@ -154,33 +163,97 @@
         </p>
       </div>
 
+      <div class="layer">
+        <p class="digit">54</p>
+        <p>Awards Winnings</p>
+      </div>
+
       <div class="our-facts">
         <div class="our-fact">
           <img src="images/icons/ribon.png" alt="" />
-          <p class="digit">54</p>
-          <p>Awards Winnings</p>
+
+          <div class="layer">
+            <p class="digit">54</p>
+            <p>Awards Winnings</p>
+          </div>
         </div>
         <div class="our-fact">
           <img src="images/icons/projects.png" alt="" />
-          <p class="digit">1458</p>
-          <p>Project Finished</p>
+          <div class="layer">
+            <p class="digit">1458</p>
+            <p>Project Finished</p>
+          </div>
         </div>
         <div class="our-fact">
           <img src="images/icons/customers.png" alt="" />
-          <p class="digit">559</p>
-          <p>Clients Worked</p>
+          <div class="layer">
+            <p class="digit">559</p>
+            <p>Clients Worked</p>
+          </div>
         </div>
         <div class="our-fact">
           <img src="images/icons/email.png" alt="" />
-          <p class="digit">22578</p>
-          <p>Email Send</p>
+          <div class="layer">
+            <p class="digit">22578</p>
+            <p>Email Send</p>
+          </div>
         </div>
       </div>
     </div>
     <!-- our facts section end -->
 
+    <!-- team work section start -->
+
+    <div id="portfolio" class="">
+      <div class="container">
+        <h1 class="sub-title">Our Works</h1>
+
+        <div class="work-list">
+          <div class="work">
+            <img src="images/team-works/work-1.png" />
+            <div class="works-layer">
+              <h3>Social Media App</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates fugit, modi dolor dignissimos impedit dolores? Error.
+              </p>
+              <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="images/team-works/work-2.png" />
+            <div class="works-layer">
+              <h3>Music App</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates fugit, modi dolor dignissimos impedit dolores? Error.
+              </p>
+              <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="images/team-works/work-3.png" />
+            <div class="works-layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates fugit, modi dolor dignissimos impedit dolores? Error.
+              </p>
+              <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <a href="" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-- team work section end -->
+
     <!-- sponser section start -->
-    <section class="container ">
+    <section class="container">
       <div class="sponser-header">
         <h2>Our Sponspors</h2>
         <p>
@@ -190,18 +263,27 @@
       </div>
 
       <div class="sponser-brands">
-        <a href="https://www.spotify.com/" target="_blank"><img src="images/sponsors/spotify.png" alt="" /></a>
-        <a href="https://www.amazon.com/" target="_blank"><img src="images/sponsors/amazon.png" alt="" /></a>
-        <a href="https://www.google.com/" target="_blank"><img src="images/sponsors/google.png" alt="" /></a>
-        <a href="https://www.telerama.fr/" target="_blank"><img src="images/sponsors/telerama.png" alt="" /></a>
-        <a href="https://www.figma.com/" target="_blank"><img src="images/sponsors/figma.png" alt="" /></a>
+        <a href="https://www.spotify.com/" target="_blank"
+          ><img src="images/sponsors/spotify.png" alt=""
+        /></a>
+        <a href="https://www.amazon.com/" target="_blank"
+          ><img src="images/sponsors/amazon.png" alt=""
+        /></a>
+        <a href="https://www.google.com/" target="_blank"
+          ><img src="images/sponsors/google.png" alt=""
+        /></a>
+        <a href="https://www.telerama.fr/" target="_blank"
+          ><img src="images/sponsors/telerama.png" alt=""
+        /></a>
+        <a href="https://www.figma.com/" target="_blank"
+          ><img src="images/sponsors/figma.png" alt=""
+        /></a>
       </div>
     </section>
 
     <footer class="container footer">
       <div>
-        
-      <p>All rights reserved copyright@2023 startup landing page design</p>
+        <p>All rights reserved copyright@2023 startup landing page design</p>
       </div>
     </footer>
     <!-- sponser section end -->
